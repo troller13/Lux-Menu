@@ -51,14 +51,14 @@ export default function Reveal({
           ? "reveal reveal-zoom"
           : "reveal";
 
+  const Tag = As as React.ElementType;
   return (
-    // @ts-expect-error — dynamic tag with ref
-    <As
+    <Tag
       ref={ref}
       className={`${variantClass} ${shown ? "in-view" : ""} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
-    </As>
+    </Tag>
   );
 }
